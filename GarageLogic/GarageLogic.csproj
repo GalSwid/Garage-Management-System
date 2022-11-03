@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DD2BC56-2243-4C9F-A6E5-48A545EED66C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Ex03.ConsoleUI</RootNamespace>
-    <AssemblyName>Ex03.ConsoleUI</AssemblyName>
+    <ProjectGuid>{D39DB008-1FDF-40D7-B879-73606CEFBEE6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GarageLogic</RootNamespace>
+    <AssemblyName>GarageLogic</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,15 +31,27 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GarageUI.cs" />
-    <Compile Include="Program.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ex03.GarageLogic\Ex03.GarageLogic.csproj">
-      <Project>{d39db008-1fdf-40d7-b879-73606cefbee6}</Project>
-      <Name>Ex03.GarageLogic</Name>
-    </ProjectReference>
+    <Compile Include="Car.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ElectricCar.cs" />
+    <Compile Include="ElectricMotorcycle.cs" />
+    <Compile Include="ElectricVehicle.cs" />
+    <Compile Include="Garage.cs" />
+    <Compile Include="GasCar.cs" />
+    <Compile Include="GasMotorcycle.cs" />
+    <Compile Include="GasVehicle.cs" />
+    <Compile Include="Motorcycle.cs" />
+    <Compile Include="GasTruck.cs" />
+    <Compile Include="Truck.cs" />
+    <Compile Include="ValueOutOfRangeException.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleCreator.cs" />
+    <Compile Include="VehiclesInGarage.cs" />
+    <Compile Include="Wheel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

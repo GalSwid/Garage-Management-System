@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ex03.GarageLogic
+namespace GarageLogic
 {
     internal class Car
     {

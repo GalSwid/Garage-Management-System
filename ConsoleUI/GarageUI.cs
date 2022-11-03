@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Ex03.GarageLogic;
+using GarageLogic;
 
-namespace Ex03.ConsoleUI
+namespace ConsoleUI
 {
     public class GarageUI
     {

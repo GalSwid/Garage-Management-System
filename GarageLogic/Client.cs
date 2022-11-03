@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Ex03.GarageLogic
+namespace GarageLogic
 {
     public class Client
     {

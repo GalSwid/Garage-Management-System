@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ex03.GarageLogic
+namespace GarageLogic
 {
-    internal class ElectricCar : ElectricVehicle
+    internal class GasCar : GasVehicle
     {
-        const float k_CarBattaryLife = 3.3f;
+        private const float k_CarFuelTank = 38f;
 
         private readonly Car r_Car;
 
-        internal ElectricCar(Dictionary<string, object> i_DataFromUser) : base(i_DataFromUser)
+        internal GasCar(Dictionary<string, object> i_DataFromUser) : base(i_DataFromUser)
         {
             NumberOfWheels = eNumberOfWheels.Car;
-            MaxBattary = k_CarBattaryLife;
+            MaxFuelTank = k_CarFuelTank;
+            FuelType = eFuelType.Octan95;
             Wheels = InitWheels(i_DataFromUser, Wheel.eWheelMaxAirPressure.Car);
             r_Car = new Car(i_DataFromUser);
         }
@@ -29,7 +30,7 @@ namespace Ex03.GarageLogic
         {
             Dictionary<string, KeyValuePair<string, Type>> data = new Dictionary<string, KeyValuePair<string, Type>>();
 
-            foreach (KeyValuePair<string, KeyValuePair<string, Type>> pair in ElectricVehicle.CreateData())
+            foreach(KeyValuePair<string, KeyValuePair<string, Type>> pair in GasVehicle.CreateData())
             {
                 data.Add(pair.Key, pair.Value);
             }
@@ -47,7 +48,5 @@ namespace Ex03.GarageLogic
             base.GetData(i_Data);
             Car.GetData(i_Data);
         }
-
     }
-
 }
